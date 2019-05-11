@@ -1,5 +1,6 @@
 package org.codeoverflow.chatoverflow.api.plugin.configuration;
 
+import org.codeoverflow.chatoverflow.api.io.input.SampleInput;
 import org.codeoverflow.chatoverflow.api.io.input.chat.MockUpChatInput;
 import org.codeoverflow.chatoverflow.api.io.input.chat.TwitchChatInput;
 import org.codeoverflow.chatoverflow.api.io.input.stat.TwitchStatInput;
@@ -26,6 +27,10 @@ public class Input {
 
     public Requirement<MockUpChatInput> mockupChat(String uniqueRequirementId, String displayName, boolean isOptional) {
         return requirements.requireInput(uniqueRequirementId, displayName, isOptional, MockUpChatInput.class);
+    }
+
+    public Requirement<SampleInput> sampelInput(String uniqueRequirementId, String displayName, boolean isOptional) {
+        return requirements.requireInput(uniqueRequirementId, displayName, isOptional, SampleInput.class);
     }
 
     public Requirement<TwitterTweetInput> twitterStream(String uniqueRequirementId, String displayName, boolean isOptional) {
