@@ -9,6 +9,7 @@ import org.codeoverflow.chatoverflow.api.io.input.chat.DiscordChatInput;
 import org.codeoverflow.chatoverflow.api.io.input.chat.MockUpChatInput;
 import org.codeoverflow.chatoverflow.api.io.input.chat.TwitchChatInput;
 import org.codeoverflow.chatoverflow.api.io.input.event.TipeeestreamEventInput;
+import org.codeoverflow.chatoverflow.api.io.input.twitter.TwitterTweetInput;
 
 // THIS FILE IS GENERATED WHILE COMPILING. DO NOT CHANGE ANYTHING HERE!
 
@@ -175,6 +176,10 @@ public class Input {
      */
     public Requirement<TipeeestreamEventInput> tipeeeStream(String uniqueRequirementId) {
         return requirements.requireInput(uniqueRequirementId, "Tipeeestream Event", false, TipeeestreamEventInput.class);
+    }
+
+    public Requirement<TwitterTweetInput> twitterStream(String uniqueRequirementId, String displayName, boolean isOptional) {
+        return requirements.requireInput(uniqueRequirementId, displayName, isOptional, TwitterTweetInput.class);
     }
 
 
