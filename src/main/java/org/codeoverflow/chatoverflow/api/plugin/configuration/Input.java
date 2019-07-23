@@ -182,5 +182,7 @@ public class Input {
         return requirements.requireInput(uniqueRequirementId, displayName, isOptional, TwitterTweetInput.class);
     }
 
+    // Add more inputs here
+
 
 }
